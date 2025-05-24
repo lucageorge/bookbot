@@ -1,4 +1,4 @@
-from stats import get_num_words 
+from stats import get_num_words, get_ascii_distribution 
 
 def get_book_text(file_path):
     with open(file_path, "r") as file:
@@ -8,5 +8,6 @@ def main():
     file_path = "books/frankenstein.txt" 
     book_text = get_book_text(file_path)
     print(f"{get_num_words(book_text)} words found in the document")
+    print(get_ascii_distribution(book_text))
 
 main()
