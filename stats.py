@@ -9,3 +9,10 @@ def get_ascii_distribution(text):
         else:
             result[c] = 1
     return result
+
+def prepare_report_data(data):
+    result = []
+    for char, num in data.items():
+        result.append({"char": char, "num": num})
+    result.sort(key=lambda x: x["num"], reverse=True)
+    return result
